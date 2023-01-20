@@ -1,0 +1,14 @@
+/*importar archivos*/
+@import 'variables';
+@import 'mixins';
+@import 'form';
+
+
+
+body {
+    font-family: $fuente;
+    background-color: $color-quinto ;
+    min-height: 100vh;
+    margin: 0;
+    @include flex-center(center);
+}

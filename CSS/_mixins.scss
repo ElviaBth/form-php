@@ -1,0 +1,32 @@
+@mixin flex-center($justify-content) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin flex-direction($direction,$just-content) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $just-content;
+}
+
+@mixin appereance($color){
+    appearance: none;
+    background-color: $color;
+    outline: none;
+}
+
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
+
+@mixin border{
+    border: 2px solid $color-septimo;
+}

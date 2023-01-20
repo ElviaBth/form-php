@@ -1,0 +1,183 @@
+.form-contenedor{
+    background-color:$color-primario;
+    width: 80%;
+    height: 100vh;
+    @include flex-center(center);
+    
+
+    form {
+            width: 22rem;
+            background-color: $color-sexto;
+            @include border-radius(0.5rem);
+            padding: $espacio;
+            @include flex-direction(column, center);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            gap:0.5rem;
+
+
+            ul{
+                @include flex-direction(row, space-around);
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 0;
+
+                li{
+                    list-style: none;
+
+                    input[type="text"] {
+                        @include appereance($color-septimo);
+                        font-size: 30%;
+                        width: 165px;
+                    }
+                }
+            }
+
+            fieldset {
+
+                    legend{
+                        color:$color-sexto;
+                        background: $color-secundario;
+                        padding: 0.3125rem 0.625rem;
+                    }
+        
+                    label {
+                    
+                            input[type="radio"] {
+                                @include appereance($color-sexto);
+                                @include size(1.25rem,1.25rem);
+                                @include border-radius(0.625rem);
+                                @include border();
+                                vertical-align: -5px;
+                    
+                            }
+                    
+                            input[type="radio"]:checked::before {
+                                transform: translate(3px, 3px) scale(1);
+                                transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+                                background-color: $color-quinto;
+                            }
+                    
+                            input[type="radio"]::before {
+                                display: block;
+                                content: " ";
+                                @include size(0.625rem, 0.625rem);
+                                @include border-radius(0.375rem);
+                                background-color: $color-quinto;
+                                font-size: 1.2em;
+                                transform: translate(3px, 3px) scale(0);
+                                transform-origin: center;
+                                transition: all 0.3s ease-in;
+                            }
+                    
+                        }
+            }
+
+            fieldset {
+                        
+                            ul {
+                                @include flex-direction(row, center);
+                                gap: 0.5rem;
+                                padding-left: 0;
+                                
+                                li {
+                                    list-style: none;
+                                    position: relative;
+            
+                                    input[type="checkbox"] {
+                                        @include appereance($color-sexto);
+                                        @include size(1.7rem, 0.65rem);
+                                        @include border-radius(0.75rem);
+                                        @include border();
+                                        transition: all 0.4s;
+                                        vertical-align: -1px;
+                                        margin:0;
+                                    
+                                    }
+            
+                                    input[type="checkbox"]::before {
+                                        @include size(1rem, 1rem);
+                                        @include border-radius(0.5625rem);
+                                        background-color: $color-quinto;
+                                        content: '';
+                                        position: absolute;
+                                        top: 2px;
+                                        left: -3%;
+                                        transition: all 0.4s;
+                                    }
+
+                                    input[type="checkbox"]:checked {
+                                        background-color: $color-septimo;
+                                        transition: all 0.4s;
+                                    }
+
+                                    input[type="checkbox"]:checked::before {
+                                        left: 16%;
+                                        transition: all 0.4s;
+                                    }
+                                }
+                            }
+            }
+
+            input[type="password"] {
+                @include appereance($color-septimo);
+                font-size: 80%;
+                margin-bottom: 0.5rem;
+            }
+
+            fieldset{
+                position: relative;
+                div{
+                    select{
+                        @include appereance($color-sexto);
+                        @include size(100%, 1.875rem);
+                        padding: 5px;
+                        font-size: 80%;
+                        margin: 0;
+                        box-sizing: border-box;
+                         
+                        
+                    }
+                    
+                    select::-ms-expand {
+                        display: none;
+                      }
+                }
+
+                div::after{
+                    content: "▼";
+                    font-size: 1rem;
+                    top: 12px;
+                    right: 16px;
+                    position: absolute;
+                }
+            }
+
+            textarea {
+                @include appereance($color-septimo);
+            }
+
+            input[type="submit"] {
+                color:$color-sexto;
+                background: $color-secundario;
+                @include border-radius(0.01rem);
+            }
+
+
+
+        }
+
+        .titulos{
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .genero, .bootcamp{
+            font-size: 0.9rem;
+        }
+
+
+        
+
+
+
+}
